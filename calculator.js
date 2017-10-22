@@ -4,7 +4,7 @@
 
   window.onload = function() {
     var wrapper = document.getElementsByClassName("btn-wrapper")[0];
-    wrapper.addEventListener("click", handleBtnClick, false);
+    wrapper.addEventListener("click", handleBtnClick);
   };
 
   function handleBtnClick(event) {
@@ -34,7 +34,6 @@
 
   function back() {
     var context = document.querySelector(".display span").innerText;
-    console.log(typeof context);
     var len = context.length;
     if (initial) {
       return;
@@ -285,10 +284,10 @@
       r2;
     try {
       t1 = num1.toString().split(".")[1].length;
-    } catch (e) {}
+    } catch (e) { }
     try {
       t2 = num2.toString().split(".")[1].length;
-    } catch (e) {}
+    } catch (e) { }
     with (Math) {
       r1 = Number(num1.toString().replace(".", ""));
       r2 = Number(num2.toString().replace(".", ""));
